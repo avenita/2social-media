@@ -1,0 +1,145 @@
+        <div className="post-container">
+            <div className="postWrapper postEdit" >
+                <div className="postTop" >
+                    <div className="postTopLeft">
+                        <Link to={`/profile/${user.username}`}>
+                            <img 
+                                className="postProfileImg"
+                                src={user.profilePicture}
+                                alt="foto" />
+                        </Link>
+                        <Link to={`/profile/${user.username}`} style={{color: 'black'}}>
+                            <span className="postUsername">{user.username}</span>
+                        </Link>
+                        <span className="postDate">{format(post.createdAt)}</span>
+                    </div>
+                    <div className="postTopRight">
+                    {   //esto se renderiza solo si solo somo dueño del post
+                        user._id === currentUser._id &&
+                            <>
+                                <MoreVert 
+                                    className="posTopRightIcon"
+                                    onClick={()=>setIsOptions(true)}/>
+                                <ul className="postTopOptions" style={{display: isOptions ? 'block' : 'none'}}>
+                                    <li 
+                                        onClick={()=>{
+                                            setIsEdit(true)
+                                            setIsOptions(false)
+                                        }}
+                                        className="postTopItem">
+                                        Editar 
+                                    </li>
+                                    <li 
+                                        className="postTopItem">
+                                        {
+                                            isDelete 
+                                                    ? <>
+                                                          <span className="yes" onClick={handleDelete}>Si</span> 
+                                                          <span className="not" onClick={handlePreDelete}>No</span> 
+                                                      </>
+                                                    : <span className="delete" onClick={handlePreDelete}>Eliminar</span>
+                                        }
+
+                                    </li>
+                                    <li 
+                                        className="postTopItem" 
+                                        onClick={()=>{
+                                            setIsOptions(false)
+                                            setIsDelete(false)
+                                        }}>
+                                        Cerrar 
+                                    </li>
+                                </ul>
+                            </>
+                        }
+                    </div>
+                </div>
+                <div className="postCenter">
+                    {/* <span className="postText">
+                        {post?.desc}
+                    </span>
+                    <img 
+                    className="postImg" 
+                    src={post.img}
+                alt="" /> */}
+                {
+                    isEdit 
+                        ? <input
+                              type="text"
+                              className="postText"
+                              name="desc"
+                              id="desc"
+                              placeholder="write description post..."
+                              onChange={handleChange}
+                              ref={desc}
+                              defaultValue={post?.desc}/>
+                        : <span className="postText">
+                                {post?.desc}
+                          </span>
+                }
+                {
+                    !url && !file  && isEdit &&
+                        <label htmlFor={`file${post._id}`}>
+                            <PermMediaOutlined htmlColor="green"/>
+                        </label>
+                }
+                    <img 
+                        className="postImg" 
+                        src={file ? URL.createObjectURL(file) : url }
+                        alt="" />
+                    <input 
+                        type="file" name={`file${post._id}`} 
+                        id={`file${post._id}`} style={{display:'none'}}
+                        onChange={handleFilePost} 
+                        accept=".png,.jpeg,.jpg" />
+                    {
+                        (url && isEdit) || 
+                        (file && isEdit) && //esto se renderiza solo si tiene img 
+                            <>
+                                <label htmlFor={`file${post._id}`} className="postIconEdit">
+                                    <EditOutlined/>
+                                </label>
+                                <Cancel 
+                                    className="postIconDelt"
+                                    onClick={()=>{
+                                        setUrl(null)
+                                        setFile(null)
+                                    }}/>
+                            </>
+                    }                    
+                </div>
+                <div className="postBottom">
+                    {
+                        isEdit
+                            ? <>
+                                <button 
+                                    className="postBottomBtn"
+                                    style={{opacity: isSave && '1' }} >Save</button>
+                                <button 
+                                    className="postBottomBtn"
+                                    onClick={cancelSave} >Cancel</button>
+                              </>
+                            : <> 
+                                <div className="postBottomLeft">
+                                    <img
+                                        onClick={handleLike} 
+                                        className="likeIcon" 
+                                        src={`${IMG_RECURSOS_SERVER}/like.png`} 
+                                        alt="like icon" />
+                                    <img
+                                        onClick={handleLike} 
+                                        className="likeIcon" 
+                                        src={`${IMG_RECURSOS_SERVER}/heart.png`} 
+                                        alt="heart icon" />
+                                    <span className="postLikeCounter">
+                                        {like} people like it
+                                    </span>
+                                </div>
+                                <div className="postBottomRight">
+                                    <span className="postCommentText">{post?.comment} comments</span>
+                                </div>
+                              </>
+                    }
+                </div>
+            </div>
+        </div>

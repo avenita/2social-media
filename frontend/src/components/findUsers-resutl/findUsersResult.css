@@ -1,0 +1,134 @@
+.findResult{
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+}
+
+.resultContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 30px;
+}
+
+.resultItem *{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400 ;
+}
+.resultItem .b{
+    color: purple;
+    font-size: 11px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+.resultItem{
+    /* width: 70%; */
+    /* margin: auto; */
+    width: 75%;
+    margin-left: 35px;
+    background-color: rgb(247, 247, 247);
+    background-color: rgb(243, 243, 243);
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.resultItemTop{
+    display: flex;
+    gap: 10px;
+}
+
+.resultItemImg{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* .resultItemTopRight */
+.resultItemTopRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.resultItemName{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.resultItemDat *{
+    color: lightslategrey;
+    font-size: 12px;
+}
+
+.resultItemFriends,
+.resultItemEmail{
+    color: lightslategrey;
+    font-size: 12px;
+}
+
+.resultItemDat{
+    display: flex;
+    gap: 20px;
+}
+
+.resultItemBottom{
+    margin-left: 10px;
+}
+
+.findResult-not{
+    text-align: center;
+    margin: 20px 30px;
+    color: slateblue;
+    font-weight: 500;
+    font-size: 16px;
+}
+.findResult-not i {
+    font-weight: 800;
+    color: rgb(78, 24, 24);
+}
+
+.findPaginateContainer{
+    background-color: rgba(137, 43, 226, 0.082);
+    width: 96%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.findNumberPag{
+    margin: 0px 7px;
+    font-size: 26px;
+    font-weight: 800;
+    color: black;
+}
+
+.findArrow{
+    cursor: pointer;
+    font-size: 45px !important;
+    color: rgb(174, 118, 230);
+}
+
+.findArrow:hover{
+    color: rebeccapurple;
+}
+
+.resultItemIsFriend{
+    position: absolute;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 26px;
+    top: 0;
+    right: -5px;
+    transform: rotate(45deg) translateX(20px);
+}

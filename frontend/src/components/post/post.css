@@ -1,0 +1,234 @@
+.post-container{
+    width: 100%;
+    border-radius: 10px;
+    --webkit-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.37);
+    box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.37);
+    margin: 30px 0;
+}
+
+.postWrapper{
+    padding: 10px;
+}
+
+.postTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postTopRight{
+    position: relative;
+}
+
+.posTopRightIcon{
+    cursor: pointer;
+}
+
+.postTopOptions{
+    background-color: rgb(236, 236, 236);
+    position: absolute;
+    z-index: 3000;
+    top: 2px;
+    right: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: visibility .3s ease ;
+}
+
+.postTopItem{
+    cursor: pointer;
+    line-height: 25px;
+    text-align: center;
+    height: 27px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 80px;
+}
+
+.delete{
+    width: 100%;
+    display: block;
+}
+
+.postTopItem:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+}
+
+.postTopItem:nth-child(2) .yes{
+    display: inline-block;
+    width: calc(100% / 2);
+    background-color: rgb(236, 236, 236);
+    color: black;
+}
+.postTopItem:nth-child(2) .yes:hover{
+    background-color: rgb(233, 56, 56);
+    color: white;
+}
+
+.postTopItem:nth-child(2) .not{
+    display: inline-block;
+    width: calc(100% / 2);
+    background-color: rgb(236, 236, 236);
+    color: black;
+}
+.postTopItem:nth-child(2) .not:hover{
+    background-color: rgb(13, 161, 13);
+    color: white;
+}
+
+.postTopItem:hover{
+    background-color: rebeccapurple;
+    color: whitesmoke;
+}
+
+.topRightOptionVisible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.postTopLeft{
+    display: flex;
+    align-items: center;
+}
+
+.postProfileImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.postUsername{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.postDate{
+    font-size: 12px;
+}
+
+.postCenter{
+    margin: 20px 0;
+    position: relative;
+    /* text-align: center; */
+}
+
+.postText{
+    margin: 0;
+    padding: 0;
+    /* display: inline; */
+    resize: none;    
+    width: 97%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.postText::-webkit-scrollbar {
+    width: 4px;
+}
+  
+.postText::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+.postText::-webkit-scrollbar-thumb {
+    border-radius: 25%;
+    background-color: rgba(194, 41, 194, 0.582)
+}
+
+.postText::placeholder{
+    font-style: italic;
+    color: rgb(163, 162, 162);
+}
+
+.postImg{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.postIconEdit,
+.postIconDelt{
+    cursor: pointer;
+    position: absolute;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.postIconDelt{
+    top: 45px;
+    right: 0;
+    border-radius: 100%;
+}
+
+.postIconEdit{
+    bottom: 0;
+    left: 5px;
+    border-radius: 50px 0px;
+    padding-left: 3px;
+    padding-top: 2px;
+}
+
+.postBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postBottomLeft{
+    display: flex;
+    align-items: center;
+}
+
+.likeIcon{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.postLikeCounter{
+    font-size: 15px;
+}
+
+.postCommentText{
+    cursor: pointer;
+    border-bottom: 1px dashed gray;
+    font-size: 15px;
+}
+
+.postBottomBtn{
+    padding: 1px 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 500 ;
+    opacity: .2;
+    cursor: pointer;
+}
+.postBottomBtn:nth-child(2){
+    opacity: 1;
+}
+
+
+.postBottomBtn:nth-child(1){
+    color: green;
+}
+
+.postBottomBtn:nth-child(2){
+    color: purple;
+}
+
+
+.postEdit{
+    background-color: rgba(102, 51, 153, 0.144);
+    border: 2px solid rgba(255, 255, 255, 0.418);
+}
+
+
+
+

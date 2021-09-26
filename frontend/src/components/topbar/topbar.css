@@ -1,0 +1,150 @@
+.topbar-container{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rebeccapurple;
+    z-index: 19000;
+}
+
+.topbarLeft{
+    /* background-color: red; */
+    flex:3;
+}
+
+.topbarLogo{
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.topbarCenter{
+    /* background-color: green; */
+    flex:5;
+}
+
+.searchbar{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    /*  */
+    position: relative;
+}
+
+.searchIcon{
+    font-size: 25px !important;
+    margin-left: 10px;
+    /*  */
+    position: absolute;
+    top: 0;
+    left: -5px;
+}
+
+.searchInput{
+    border: none;
+    width: 70%;
+    width: 75%;
+    outline: none;
+    /*  */
+    position: absolute;
+    top: 3px;
+    left: 35px;
+}
+
+.topbarRigth{
+    /* background-color: yellow; */
+    flex:4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+    z-index: 8000;
+    /*  */
+
+}
+
+.topbarLink{
+    margin-right:10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.topbarIcons{
+    display: flex;
+}
+
+.topbarIconItem{
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.topbarIconBadge{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+}
+
+.topbarProfileOtionsContainer{
+    text-align: center;
+}
+
+#ver{
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: rebeccapurple;
+}
+
+.topbarProfileImg{
+    width: 32px;
+    height: 32px;
+    margin-top: 7px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.topbarProfileOptions{
+    position: absolute;
+    z-index: -4000;
+    transform: translateY(-230px);
+    transition: .5s transform ease;
+}
+
+.topbarMenuConfg{
+    box-shadow: 0px 1px 10px 2px  rgba(0, 0, 0, 0.349);
+    background-color: rebeccapurple;
+}
+
+.topbarItemConfg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    width: 150px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.topbarItemConfg:hover{
+    background-color: rgba(245, 245, 245, 0.158);
+} 
+
+.topbarProfileOtionsContainer:hover .topbarProfileOptions{
+    transform: translateY(0px);
+} 
+

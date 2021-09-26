@@ -1,0 +1,115 @@
+.profileCover{
+    position: relative;
+    height: 320px;
+}
+
+.profileCoverImgContainer{
+    position: relative;
+}
+
+.profileCoverImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.profileCoverIcon{
+    position: absolute;
+    color: rgb(125, 68, 182);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cov{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.profileUserImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 150px;
+    top: -75px;
+    border: 3px solid white;
+}
+
+.pro{
+    position: absolute;
+    top: -60px;
+    left: calc(50% + 35px);
+}
+
+
+
+.profileCoverImgContainer:hover .profileCoverIcon{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* edit container */
+.imgEdit-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background-color: rgba(102, 51, 153, 0.171);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgEdit{
+    position: relative;
+    border: 3px solid rgba(102, 51, 153, 0.5);
+    padding: 10px 20px;
+}
+
+.imgEdit-container img{
+    width: 250px;
+    object-fit: cover;
+}
+
+.imgEditIconCancel{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    color: white;
+}
+
+.imgEditIconEdit{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 23px;
+}
+
+.btnSave{
+    border: none;
+    outline: none;
+    position: absolute;
+    padding: 3px 43px;
+    bottom: 5px;
+    right: 10px;
+    background-color: rgb(134, 66, 202);
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.btnSave:hover{
+    background-color: rebeccapurple;
+    color: white;
+}

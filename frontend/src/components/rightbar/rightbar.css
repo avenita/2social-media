@@ -1,0 +1,132 @@
+.rightbar-container{
+    /* background-color: royalblue; */
+    flex: 4;
+    margin-top: 10px;
+    /*  */
+    margin: 10px;
+}
+
+.rightbarWrapper{
+    padding: 20px 20px 10px 0;
+}
+
+.birthdayContainer{
+    display: flex;
+    align-items: center;
+}
+
+.birthdayImg{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.birthdayText{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.rightbarAd{
+    width: 100%;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.rightbarTitle{
+    margin-bottom:20px ;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rightbarInfo{
+    margin-bottom: 30px;
+}
+
+.rightbarinfoItem{
+    margin-bottom: 10px;
+}
+
+.rightbarInfoKey{
+    font-weight: 500;
+    margin-right: 15px;
+    color: #555;
+}
+
+.rightbarInfoValue{
+    font-weight: 300;
+}
+
+.rightbarFollowings{
+    width: 85%;
+    padding: 10px;
+    margin: auto;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    background-color: rgb(248, 248, 248);
+    position: relative;
+
+    /* justify-content: start; */
+    /*  */
+    /* padding: 0px 50px; */
+}
+
+.rightbarFollowing{
+    background-color: white;
+    cursor: pointer;
+}
+
+.rightbarFollowing a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rightbarFollowingImg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.rigthFollowButton{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgba(102, 51, 153, 0.911);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+.rigthFollowButton:hover{
+    background-color: rebeccapurple;
+}
+
+.rightbarFollowingsLink{
+    display: block;
+    font-weight: 500;
+    color: royalblue;
+    position: absolute;
+    bottom: -18px;
+    right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
